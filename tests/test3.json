@@ -1,0 +1,56 @@
+{
+  "description": "Тест логического AND",
+  "timesteps": 7,
+  "external_inputs": {
+    "A": [1, 0, 1, 0],
+    "B": [1, 0, 1, 0],
+    "C": [1, 1, 1, 0],
+    "D": [1, 1, 1, 1],
+    "E": [1, 0, 1, 0],
+    "F": [0, 1, 1, 0],
+    "G": [0, 1, 1, 0]
+  },
+  "neurons": {
+    "n1": {
+      "threshold": 1,
+      "exc_inputs": ["A"],
+      "inh_inputs": []
+    },
+    "n2": {
+      "threshold": 1,
+      "exc_inputs": ["B"],
+      "inh_inputs": []
+    },
+    "n3": {
+      "threshold": 1,
+      "exc_inputs": ["C"],
+      "inh_inputs": []
+    },
+    "n4": {
+      "threshold": 1,
+      "exc_inputs": ["D"],
+      "inh_inputs": []
+    },
+    "n5": {
+      "threshold": 1,
+      "exc_inputs": ["E"],
+      "inh_inputs": []
+    },
+    "n6": {
+      "threshold": 1,
+      "exc_inputs": ["F"],
+      "inh_inputs": []
+    },
+    "n7": {
+      "threshold": 1,
+      "exc_inputs": ["G"],
+      "inh_inputs": []
+    },
+    "out": {
+      "threshold": 2,
+      "exc_inputs": ["n1", "n2"],
+      "inh_inputs": []
+    }
+  },
+  "expected_output": [0, 1, 1, 1, 0, 1, 1]
+}
